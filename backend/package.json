@@ -1,0 +1,29 @@
+{
+  "name": "grid-action-nexus-backend",
+  "version": "1.0.0",
+  "description": "Backend for the Grid Action Nexus project using Express and MongoDB",
+  "main": "src/server.ts",
+  "scripts": {
+    "start": "ts-node src/server.ts",
+    "dev": "nodemon src/server.ts"
+  },
+  "dependencies": {
+    "@types/cors": "^2.8.19",
+    "cors": "^2.8.5",
+    "csvtojson": "^2.0.10",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.23",
+    "qs": "^6.14.0"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.19.6",
+    "@types/express": "^5.0.3",
+    "nodemon": "^2.0.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  }
+}
