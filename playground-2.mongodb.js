@@ -1,3 +1,4 @@
+
 /* global use, db */
 
 // Select the database to use.
@@ -135,7 +136,7 @@ function parseCSV(csv) {
 }
 
 const cars = parseCSV(csvData);
-
+db.getCollection('cars').deleteMany({});
 // Insert into 'cars' collection
 db.getCollection('cars').insertMany(cars);
 

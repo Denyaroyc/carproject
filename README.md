@@ -83,12 +83,9 @@ npm run dev
 ## API Endpoints
 
 - `GET /api/cars`: Fetch all car data with optional search and filter query parameters.
-- `GET /api/cars/:id`: Fetch a single car by ID.
-- `DELETE /api/cars/:id`: Delete a car by ID.
+- `GET /api/car`: Fetch a single car by ID.
+- `DELETE /api/car`: Delete a car by ID.
 
-See `backend/src/routes/dataRoutes.ts` and `backend/src/controllers/dataController.ts` for details.
-
----
 
 ## Technologies Used
 
@@ -114,5 +111,5 @@ This project is licensed under the MIT License. See the LICENSE file for more de
 
 ## Credits
 
-Developed by [Your Name/Team].  
+Developed by Denya C Roy.  
 Feel free to contribute or reach out for collaborations!

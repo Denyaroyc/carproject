@@ -46,7 +46,7 @@ mongoose.connect('mongodb+srv://denyaroy7:denyageo@cluster0.ttu3fdd.mongodb.net/
 } as mongoose.ConnectOptions)
     .then(async () => {
         console.log('MongoDB connected');
-        await replaceCarsFromCSV(); // <-- Add this line
+        //await replaceCarsFromCSV(); // <-- Add this line
     })    .catch(err => console.error('MongoDB connection error:', err));
 
 
@@ -59,7 +59,6 @@ app.get('/api/cars', async (req: Request, res: Response) => {
         };
 
         const query: Record<string, any> = {};
-
         // List of numeric fields
         const numericFields = ['Range_Km', 'TopSpeed_KmH', 'AccelSec', 'Efficiency_WhKm', 'Seats', 'PriceEuro'];
 
