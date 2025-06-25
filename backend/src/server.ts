@@ -40,7 +40,7 @@ async function replaceCarsFromCSV() {
     console.log('MongoDB collection replaced with CSV data.');
 }
 
-mongoose.connect('mongodb+srv://denyaroy7:denyageo@cluster0.ttu3fdd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
+mongoose.connect('mongodb+srv://denyaroy7:denyageo@cluster0.ttu3fdd.mongodb.net/mongodbVSCodePlaygroundDB?retryWrites=true&w=majority&appName=Cluster0', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 } as mongoose.ConnectOptions)
