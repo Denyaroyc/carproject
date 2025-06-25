@@ -60,7 +60,7 @@ app.get('/api/cars', async (req: Request, res: Response) => {
 
         const query: Record<string, any> = {};
         // List of numeric fields
-        const numericFields = ['Range_Km', 'TopSpeed_KmH', 'AccelSec', 'Efficiency_WhKm', 'Seats', 'PriceEuro'];
+        const numericFields = ['Range_Km', 'TopSpeed_KmH', 'FastCharge_KmH', 'AccelSec', 'Efficiency_WhKm', 'Seats', 'PriceEuro'];
 
         // Build query from filters
         filters.forEach(filter => {
@@ -110,7 +110,13 @@ app.get('/api/cars', async (req: Request, res: Response) => {
         }
 
         const results = await Car.find(query);
-        res.json(results);
+        const modifiedResults = results.map((car: any) => {
+  const carObj = car.toObject(); // convert Mongoose document to plain object
+  carObj.RapidCharge = carObj.RapidCharge ? "Yes" : "No";
+  return carObj;
+});
+        res.json(modifiedResults);
+
     } catch (err: any) {
         res.status(500).json({ error: err.message });
     }
